@@ -1,3 +1,4 @@
+import { DashboardService } from './dashboard.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,10 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit {
-
-  constructor() { }
+  bigChart = [];
+  cards = [];
+  pieCharts = [];
+  constructor(private dashboardService: DashboardService) { }
 
   ngOnInit() {
+    this.bigChart = this.dashboardService.bigChart();
+    this.cards = this.dashboardService.cards();
+    this.pieCharts = this.dashboardService.pieCharts()
   }
 
 }
