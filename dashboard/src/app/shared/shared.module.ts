@@ -1,4 +1,4 @@
-
+import { CoronaApiService } from './widgets/corona-api/corona-api.service';
 
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -15,6 +15,8 @@ import { CardComponent } from './widgets/card/card.component';
 import { PieComponent } from './widgets/pie/pie.component';
 import { TableComponent } from './widgets/table/table.component';
 import { MatPaginatorModule } from '@angular/material/paginator';
+import { CoronaApiComponent } from './widgets/corona-api/corona-api.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -25,6 +27,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     CardComponent,
     PieComponent,
     TableComponent,
+    CoronaApiComponent,
   ],
   imports: [
     CommonModule,
@@ -38,7 +41,8 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     RouterModule,
     HighchartsChartModule,
     MatPaginatorModule,
-    MatTableModule
+    MatTableModule,
+    HttpClientModule
   ],
   exports: [
     HeaderComponent,
@@ -47,7 +51,9 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     AreaComponent,
     CardComponent,
     PieComponent,
-    TableComponent
-  ]
+    TableComponent,
+    CoronaApiComponent,
+  ],
+
 })
 export class SharedModule { }

@@ -1,0 +1,98 @@
+<div class="card-from mt-2">
+  <div class="card" style="border: 1px solid #45afaf;">
+    <div class="card-header" style="background-color: #45afaf;
+                          border: 1px solid #45afaf;">
+      <p class="mb-0" style="font-size: 13px;">Defect/ Shortage and Damage</p>
+    </div>
+    <div class="card-body">
+      <div class="table-responsive mt-1">
+        <div [formGroup]="coronaFormTable">
+          <table class="table w-100 table-bordered table-sm" formArrayName="coronaData">
+            <thead class="thead-light">
+              <tr>
+                <th scope="col" style="width: 10px">Select</th>
+                <th scope="col" style="width: 150px;">Item No</th>
+                <th scope="col" style="width: 150px;">Item Description</th>
+                <th scope="col" style="width: 150px;"> Quantity</th>
+                <th scope="col" style="width: 150px;">Remark</th>
+                <th scope="col" style="width: 150px;">Type</th>
+                <th scope="col" style="width: 10px">Complaint to be Raised</th>
+              </tr>
+              <tr></tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let option of coronaFormTable.get('coronaData')['controls']; let i = index;"
+                [formGroupName]="i">
+                <td style=" padding-top: 10px;">
+                  <mat-checkbox color="basic" class="form-control form-control-sm"
+                    [formControl]="option.get('isSelected')" [checked]></mat-checkbox>
+                </td>
+                <td>
+                  <mat-form-field appearance="outline" class="w-100" [style.fontSize.px]="10">
+                    <mat-label>Item Number</mat-label>
+                    <input matInput placeholder="Item Number" [formControl]="option.get('itemNo')"
+                      [matAutocomplete]="autoItemNumber" (keydown)="onKeyDownForItemNo($event,option)">
+                    <mat-autocomplete #autoItemNumber="matAutocomplete"
+                      (optionSelected)="optionSelectedItem($event, option)" [displayWith]="displayFnItemNumber"
+                      [panelWidth]="300">
+                      <!-- (blur)="itemNumberBlur()" -->
+                      <mat-option *ngFor="let option of (itemNumberList$| async)" [value]="option">
+                        {{option?.displayValue}}
+                      </mat-option>
+                    </mat-autocomplete>
+                    <mat-icon matSuffix>search</mat-icon>
+                    <mat-error *ngIf="option.get('itemNo').hasError('selectFromList')"> Please
+                      select from list
+                    </mat-error>
+                  </mat-form-field>
+                </td>
+                <td>
+                  <mat-form-field class="w-100" appearance="outline" [style.fontSize.px]="10">
+                    <input matInput placeholder="Item Description" [formControl]="option.get('itemDescription')">
+                  </mat-form-field>
+                </td>
+                <td>
+                  <mat-form-field class="w-100" appearance="outline" [style.fontSize.px]="10">
+                    <input matInput placeholder="Quantity" [formControl]="option.get('quantity')"
+                      (change)="qauntityChange($event,option)">
+                    <mat-error *ngIf="option.get('quantity').hasError('errors')"> Quantity
+                      Required
+                    </mat-error>
+                  </mat-form-field>
+                </td>
+                <td>
+                  <mat-form-field class="w-100" appearance="outline" [style.fontSize.px]="10">
+                    <input matInput placeholder="Remark" [formControl]="option.get('remarks')">
+                  </mat-form-field>
+                </td>
+                <td>
+                  <mat-form-field appearance="outline" [style.fontSize.px]="10">
+                    <mat-label>Select Type</mat-label>
+                    <mat-select [formControl]="option.get('type')"
+                      (selectionChange)="selectionChangedType($event,option)">
+                      <mat-option *ngFor="let option of typeList" [value]="option">
+                        {{option}}</mat-option>
+                    </mat-select>
+                    <mat-error *ngIf="option.get('type').hasError('errors')"> Type
+                      Required
+                    </mat-error>
+                  </mat-form-field>
+                </td>
+                <td style="padding-top: 10px;">
+                  <mat-checkbox color="basic" class="form-control form-control-sm"
+                    [formControl]="option.get('raiseComplaint')" [checked]></mat-checkbox>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class=" text-center ">
+          <button type="button" class="btn btn-sm btn_primary " *ngIf="!isView" (click)="addRow()"> Add
+            Row</button>
+          <button type="button" class="btn btn-sm btn_secondary ml-2" *ngIf="!isView" (click)="deleteRow()">Delete Row
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

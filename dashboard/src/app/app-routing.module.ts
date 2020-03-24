@@ -17,6 +17,10 @@ const routes: Routes = [
       path: 'posts',
       component: PostsComponent
     }]
+  },
+  {
+    path: 'redux',
+    loadChildren: () => import('./modules/redux/redux.module').then(m => m.ReduxModule)
   }
 
 ];
