@@ -25,10 +25,10 @@ export class CoronaApiService {
   tableRow(data?) {
     return this.formBuilder.group({
       id: [data ? data.id : null],
-      date: [data ? data.date : null],
-      confirmed: [{ value: data ? data.confirmed : null, disabled: false }],
+      date: [{ value: data ? data.date : null, disabled: true }],
+      confirmed: [{ value: data ? data.confirmed : null, disabled: true }],
       deaths: [{ value: data ? data.deaths : null, disabled: true }],
-      recovered: [{ value: data ? data.recovered : null, disabled: false }],
+      recovered: [{ value: data ? data.recovered : null, disabled: true }],
     })
   }
 }

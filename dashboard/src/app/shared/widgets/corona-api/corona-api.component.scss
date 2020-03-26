@@ -1,1 +1,11 @@
+.w-100 {
+  color: darken($color: #000000, $amount: 0);
 
+  text-align: center
+}
+
+:host {
+  .mat-input-element:disabled {
+    color: black !important;
+  }
+}

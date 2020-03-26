@@ -1,11 +1,11 @@
 <div class="card-from mt-1 ">
-  <div class="card" style="border: 1px solid #45afaf;">
-    <div class="card-header" style="background-color: #45afaf;
-                          border: 1px solid #45afaf;">
-      <p class="mb-0" style="font-size: 18px; text-align: center;">India Corona Live Result</p>
+  <div class="card" style="border: 1px solid #3f51b5;">
+    <div class="card-header" style="background-color: #3f51b5;
+                          border: 1px solid #3f51b5;">
+      <p class="mb-0" style="font-size: 20px; text-align: center;color: aliceblue;">India Corona Live Result</p>
     </div>
     <div class="card-body">
-      <div class="table-responsive mt-1">
+      <div class="table-responsive" style="background-color:white">
         <div [formGroup]="coronaFormTable">
           <table class="table w-100 table-bordered table-sm" formArrayName="coronaData">
             <thead class="thead-light">
@@ -44,7 +44,7 @@
                     </mat-error>
                   </mat-form-field>
                 </td> -->
-                <td style="vertical-align: middle;">
+                <td style="vertical-align: middle; ">
                   <mat-form-field class="w-100" appearance="outline" [style.fontSize.px]="14">
                     <input matInput placeholder="Date" [formControl]="option.get('date')">
                   </mat-form-field>
