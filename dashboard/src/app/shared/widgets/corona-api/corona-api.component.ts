@@ -22,6 +22,7 @@ export class CoronaApiComponent implements OnInit {
     this.coronaFormTable = this.formBuilder.group({
       coronaData: this.formBuilder.array([]),
     })
+    this.getTableData();
   }
 
   get tableRow() {
@@ -33,6 +34,14 @@ export class CoronaApiComponent implements OnInit {
   addRow(data?: object) {
     let dataTable = this.tableRow.get('coronaData') as FormArray;
     dataTable.push(this.createIemDetailsTableRow(data));
+  }
+  getTableData() {
+    this.coronaApiService.getResult().subscribe(data => {
+      console.log("data ", data['India']);
+      data['India'].forEach(element => {
+        this.addRow(element)
+      });
+    })
   }
 }
 

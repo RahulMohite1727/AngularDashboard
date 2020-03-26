@@ -1,8 +1,8 @@
-<div class="card-from mt-2">
+<div class="card-from mt-1 ">
   <div class="card" style="border: 1px solid #45afaf;">
     <div class="card-header" style="background-color: #45afaf;
                           border: 1px solid #45afaf;">
-      <p class="mb-0" style="font-size: 13px;">Defect/ Shortage and Damage</p>
+      <p class="mb-0" style="font-size: 18px; text-align: center;">India Corona Live Result</p>
     </div>
     <div class="card-body">
       <div class="table-responsive mt-1">
@@ -10,22 +10,24 @@
           <table class="table w-100 table-bordered table-sm" formArrayName="coronaData">
             <thead class="thead-light">
               <tr>
-                <th scope="col" style="width: 150px;">Date</th>
-                <th scope="col" style="width: 150px;">confirmed</th>
-                <th scope="col" style="width: 150px;">deaths</th>
-                <th scope="col" style="width: 150px;">recovered</th>
+                <th scope="col">Sr.No</th>
+                <th scope="col" style="width: 320px; ">Date</th>
+                <th scope="col" style="width: 320px; ">Confirmed</th>
+                <th scope="col" style="width: 320px; ">Deaths</th>
+                <th scope="col" style="width: 320px; ">Recovered</th>
               </tr>
               <tr></tr>
             </thead>
             <tbody>
               <tr *ngFor="let option of coronaFormTable.get('coronaData')['controls']; let i = index;"
                 [formGroupName]="i">
+                <td style="vertical-align: center;">{{i+1}}</td>
                 <!-- <td style=" padding-top: 10px;">
                   <mat-checkbox color="basic" class="form-control form-control-sm"
                     [formControl]="option.get('isSelected')" [checked]></mat-checkbox>
                 </td> -->
                 <!-- <td>
-                  <mat-form-field appearance="outline" class="w-100" [style.fontSize.px]="10">
+                  <mat-form-field appearance="outline" class="w-100" [style.fontSize.px]="14">
                     <mat-label>Item Number</mat-label>
                     <input matInput placeholder="Item Number" [formControl]="option.get('itemNo')"
                       [matAutocomplete]="autoItemNumber" (keydown)="onKeyDownForItemNo($event,option)">
@@ -42,37 +44,36 @@
                     </mat-error>
                   </mat-form-field>
                 </td> -->
-                <td>
-                  <mat-form-field class="w-100" appearance="outline" [style.fontSize.px]="10">
+                <td style="vertical-align: middle;">
+                  <mat-form-field class="w-100" appearance="outline" [style.fontSize.px]="14">
                     <input matInput placeholder="Date" [formControl]="option.get('date')">
                   </mat-form-field>
                 </td>
-                <td>
-                  <mat-form-field class="w-100" appearance="outline" [style.fontSize.px]="10">
+                <td style="vertical-align: middle;">
+                  <mat-form-field class="w-100" appearance="outline" [style.fontSize.px]="14">
                     <input matInput placeholder="Confirmed" [formControl]="option.get('confirmed')">
                   </mat-form-field>
                 </td>
-                <td>
-                  <mat-form-field class="w-100" appearance="outline" [style.fontSize.px]="10">
+                <td style="vertical-align: middle;">
+                  <mat-form-field class="w-100" appearance="outline" [style.fontSize.px]="14">
                     <input matInput placeholder="Deaths" [formControl]="option.get('deaths')">
                   </mat-form-field>
                 </td>
-                <td>
-                  <mat-form-field class="w-100" appearance="outline" [style.fontSize.px]="10">
+                <td style="vertical-align: middle;">
+                  <mat-form-field class="w-100" appearance="outline" [style.fontSize.px]="14">
                     <input matInput placeholder="Recovered" [formControl]="option.get('recovered')">
                   </mat-form-field>
                 </td>
-
               </tr>
             </tbody>
           </table>
         </div>
-        <div class=" text-center ">
-          <button type="button" class="btn btn-sm btn_primary " *ngIf="!isView" (click)="addRow()"> Add
+        <!-- <div class=" text-center ">
+          <button type="button" class="btn btn-sm btn_primary " (click)="addRow()"> Add
             Row</button>
-          <button type="button" class="btn btn-sm btn_secondary ml-2" *ngIf="!isView" (click)="deleteRow()">Delete Row
+          <button type="button" class="btn btn-sm btn_secondary ml-2" (click)="deleteRow()">Delete Row
           </button>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>

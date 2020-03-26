@@ -1,8 +1,8 @@
+import { MaterialModule } from './../app.module';
 import { CoronaApiService } from './widgets/corona-api/corona-api.service';
-
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MatDividerModule, MatToolbarModule, MatIconModule, MatButtonModule, MatListModule, MatTableModule } from '@angular/material'
+import { MatDividerModule, MatToolbarModule, MatIconModule, MatButtonModule, MatListModule, MatTableModule, MatFormFieldModule, MatInputModule, MatRippleModule } from '@angular/material'
 import { FlexLayoutModule } from '@angular/flex-layout'
 import { RouterModule } from '@angular/router';
 import { HeaderComponent } from './componets/header/header.component';
@@ -17,6 +17,7 @@ import { TableComponent } from './widgets/table/table.component';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { CoronaApiComponent } from './widgets/corona-api/corona-api.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,12 @@ import { HttpClientModule } from '@angular/common/http';
     HighchartsChartModule,
     MatPaginatorModule,
     MatTableModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatRippleModule,
   ],
   exports: [
     HeaderComponent,
