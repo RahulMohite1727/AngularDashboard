@@ -24,16 +24,15 @@ export class CoronaApiComponent implements OnInit {
     })
   }
 
-  get itemDetailsTableRow() {
+  get tableRow() {
     return this.coronaFormTable as FormGroup
   }
   createIemDetailsTableRow(data?: any) {
-    return this.coronaApiService.itemDetailsTableRow(data)
+    return this.coronaApiService.tableRow(data)
   }
   addRow(data?: object) {
-    let dataTable = this.itemDetailsTableRow.get('coronaData') as FormArray;
+    let dataTable = this.tableRow.get('coronaData') as FormArray;
     dataTable.push(this.createIemDetailsTableRow(data));
-
   }
 }
 

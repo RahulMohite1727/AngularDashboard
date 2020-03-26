@@ -21,19 +21,14 @@ export class CoronaApiService {
     return this.httpClient.get("https://pomber.github.io/covid19/timeseries.json")
 
   }
-  itemDetailsTableRow(data?) {
+
+  tableRow(data?) {
     return this.formBuilder.group({
       id: [data ? data.id : null],
-      sparePartMasterId: [data ? data.sparePartMasterId : null],
-      isSelected: [{ value: false, disabled: false }],
-      itemNo: [{ value: data ? data.itemNo : null, disabled: false }],
-      itemDescription: [{ value: data ? data.itemDescription : null, disabled: true }],
-      quantity: [{ value: data ? data.quantity : null, disabled: false }],
-      remarks: [{ value: data ? data.remarks : null, disabled: false }],
-      type: [{ value: data ? data.type : null, disabled: false }],
-      raiseComplaint: [{ value: data ? data.raiseComplaint : null, disabled: true }],
-      deleteFlag: [false],
-      rowId: [data ? data.rowId : null]
+      date: [data ? data.date : null],
+      confirmed: [{ value: data ? data.confirmed : null, disabled: false }],
+      deaths: [{ value: data ? data.deaths : null, disabled: true }],
+      recovered: [{ value: data ? data.recovered : null, disabled: false }],
     })
   }
 }
