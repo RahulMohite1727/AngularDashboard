@@ -1,3 +1,4 @@
+import { MaterialModule } from './../../app.module';
 import { DashboardService } from './../../modules/dashboard/dashboard.service';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { NgModule } from '@angular/core';
@@ -25,6 +26,7 @@ import { MatDividerModule, MatCardModule } from '@angular/material';
     MatDividerModule,
     MatCardModule,
     FlexLayoutModule,
+    // MaterialModule,
 
   ],
   providers: [DashboardService]

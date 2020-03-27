@@ -60,8 +60,8 @@ export class MaterialModule { }
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    MaterialModule,
     DefaultModule,
-
   ],
   providers: [],
   bootstrap: [AppComponent]
