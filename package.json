@@ -53,14 +53,6 @@
     "ts-node": "~7.0.0",
     "tslint": "~5.15.0",
     "typescript": "^3.4.5"
-  },
-  "deploy": {
-    "builder": "angular-cli-ghpages:deploy",
-    "options": {
-      "baseHref": "https://rahulmohite1727.github.io/AngularDashboard/",
-
-      "name": "Dashboard",
-      "email": "rahulmohite1727@gmail.com"
-    }
   }
+
 }
