@@ -44,5 +44,7 @@ Steps to deploy to GitHub pages=>
 5 => Then deploy using the following command which creates a new branch called gh-pages and pushes the compiled code to the branch.
 =====>>>> angular-cli-ghpages [OPTIONS] <=========
 
-
+6 => after that only do 
+=====>>>> ng deploy <=========
+to update new changes to build
 (https://medium.com/@swarnakishore/deploying-angular-cli-project-to-github-pages-db49246598a1)
