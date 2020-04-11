@@ -6,7 +6,8 @@ import { TestPracticeComponent } from './test-practice/test-practice.component';
 const routes: Routes = [
   {
     path: '',
-    component: TestPracticeComponent
+    component: TestPracticeComponent,
+    // pathMatch:'full'
   }
 ];
 
