@@ -43,3 +43,6 @@ Steps to deploy to GitHub pages=>
 4 => Change the above command to include your GitHub username and your repository name. The above command transpiles the typescript code to javascript so that the browser can understand. The compiled code is available in the dist folder.
 5 => Then deploy using the following command which creates a new branch called gh-pages and pushes the compiled code to the branch.
 =====>>>> angular-cli-ghpages [OPTIONS] <=========
+
+
+(https://medium.com/@swarnakishore/deploying-angular-cli-project-to-github-pages-db49246598a1)
