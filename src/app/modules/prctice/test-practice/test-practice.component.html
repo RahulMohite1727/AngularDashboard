@@ -1,0 +1,89 @@
+<div class="container" style="margin-top: 23px;">
+  <div class="row justify-content-between">
+
+    <div class="col-4  ">
+      <h3><strong>DIGITAL LIFE LINE</strong></h3>
+    </div>
+    <div class="col-4 offset-4">
+      <div class="box">
+        <p style="margin-top: 8px;">add image hear</p>
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-between mt-2">
+    <div class="col-4  ">
+      <p>YOUR FINANCIAL ADVISERS DETAILS</p>
+    </div>
+    <div class="col-4 offset-4">
+      <p style="margin-left: 140px;">Date:_________</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-6">
+      <div class="row  ">
+        <div class="col-3">
+          <p>Name:___________________________________</p>
+        </div>
+      </div>
+      <div class="row  mt-2">
+        <div class="col-6" style="white-space: nowrap">
+          Mobile Number:____________________
+        </div>
+      </div>
+      <div class="row  mt-4">
+        <div class="col-3  ">
+          <p>YOUR DETAILS</p>
+        </div>
+      </div>
+      <div class="row ">
+        <div class="col-3">
+          <p>Name:___________________________________</p>
+        </div>
+      </div>
+      <div class="row  mt-2">
+        <div class="col-3" style="white-space: nowrap">
+          <p>Mobile Number:________</p>
+        </div>
+        <div class="col-3" style="white-space: nowrap ;margin-left: 37px;">
+          <p>Current Age:________</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+<br>
+<br>
+
+<div class="container">
+  <div class="row">
+    <div class="d-flex justify-content-md-between">
+      <form [formGroup]="orderForm" (ngSubmit)="onSubmit()">
+        <label>
+          First Name:
+          <input type="text" formControlName="firstName">
+        </label>
+
+        <label>
+          Last Name:
+          <input type="text" formControlName="lastName">
+        </label>
+
+        <div>
+          <p>Add items</p>
+          <ul formArrayName="items">
+            <li *ngFor="let item of orderForm.controls.items.controls; let i = index">
+              <input type="text" formControlName="{{i}}">
+              <button type="button" title="Remove Item" (click)="onRemoveItem(i)">Remove</button>
+            </li>
+          </ul>
+          <button type="button" (click)="onAddItem()">
+            Add an item
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
