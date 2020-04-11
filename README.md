@@ -25,3 +25,21 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////////
+
+Steps to deploy to GitHub pages=>
+
+1 => Open Terminal, change the current working directory to your local project.
+2 => Type the following command to install the npm package globally.
+=====>>>>  npm i -g angular-cli-ghpages <=========
+
+3 =>  Next, you need to build the app, to do that run the following command.
+=====>>>> ng build --prod --base-href “https://username.github.io/repository_name/ <=========
+
+4 => Change the above command to include your GitHub username and your repository name. The above command transpiles the typescript code to javascript so that the browser can understand. The compiled code is available in the dist folder.
+5 => Then deploy using the following command which creates a new branch called gh-pages and pushes the compiled code to the branch.
+=====>>>> angular-cli-ghpages [OPTIONS] <=========
