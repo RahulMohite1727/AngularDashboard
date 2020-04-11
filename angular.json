@@ -126,7 +126,6 @@
           "builder": "angular-cli-ghpages:deploy",
           "options": {
             "baseHref": "https://rahulmohite1727.github.io/AngularDashboard/",
-
             "name": "Dashboard",
             "email": "rahulmohite1727@gmail.com"
           }
