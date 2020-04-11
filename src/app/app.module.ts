@@ -7,6 +7,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { MatIconModule, MatInputModule, MatSelectModule, MatDatepickerModule, MatNativeDateModule, MatButtonModule, MatFormFieldModule, MatTableModule, MatToolbarModule, MatCardModule, MatMenuModule, MatDialogModule, MatSortModule, MatProgressSpinnerModule, MatPaginatorModule, MatCheckboxModule, MatRippleModule, MatStepperModule, MatExpansionModule, MatAutocompleteModule, MatBadgeModule, MatBottomSheetModule, MatButtonToggleModule, MatChipsModule, MatDividerModule, MatGridListModule, MatListModule, MatProgressBarModule, MatRadioModule, MatSidenavModule, MatSliderModule, MatSlideToggleModule, MatSnackBarModule, MatTabsModule, MatTooltipModule, MatTreeModule, MAT_CHECKBOX_CLICK_ACTION, MAT_RIPPLE_GLOBAL_OPTIONS } from '@angular/material';
 
 import { DefaultModule } from './layout/default/default.module';
+import { CheckListEffectsComponent } from './modules/check-list-effects/check-list-effects.component';
 
 @NgModule({
   exports: [
@@ -49,7 +50,7 @@ import { DefaultModule } from './layout/default/default.module';
     MatTreeModule,
     MatExpansionModule,
   ],
-  declarations: [],
+  declarations: [CheckListEffectsComponent],
 })
 export class MaterialModule { }
 @NgModule({

@@ -1,0 +1,24 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', 'sans-serif';
+  letter-spacing: 1px;
+  user-select: none;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #001925;
+}
+
+.list {
+  padding: 30px 70px 10px 30px;
+  position: relative;
+  background: #042b3e;
+  border-top: 50px solid #03a9f4;
+  box-shadow: 0 0 5px rgba(214, 214, 214, 0.1);
+}
