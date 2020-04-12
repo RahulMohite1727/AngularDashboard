@@ -39,7 +39,7 @@ Steps to deploy to GitHub pages=>
 
 3 =>  Next, you need to build the app, to do that run the following command.
 =====>>>> ng build --prod --base-href “https://username.github.io/repository_name/ <=========
-
+<!-- $ ng build --prod --base-href “https://rahulmohite1727.github.io/AngularDashboard/" -->
 4 => Change the above command to include your GitHub username and your repository name. The above command transpiles the typescript code to javascript so that the browser can understand. The compiled code is available in the dist folder.
 5 => Then deploy using the following command which creates a new branch called gh-pages and pushes the compiled code to the branch.
 =====>>>> angular-cli-ghpages [OPTIONS] <=========
